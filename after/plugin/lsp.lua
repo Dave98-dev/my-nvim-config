@@ -27,3 +27,10 @@ local cmp = require('cmp')
 lsp_zero.defaults.cmp_mappings({
     ["<C-Space>"] = cmp.mapping.complete()
 })
+
+lsp_zero.on_attach(function(client, buffer)
+    local opts = {buffer=buffer, remap=false}
+
+    vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
+end)
+
