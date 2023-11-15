@@ -9,3 +9,7 @@ vim.keymap.set("n", "<leader>bt", function ()
     local nline = line:sub(0, pos) .. '`' .. line:sub(pos + 1)
     vim.api.nvim_set_current_line(nline)    
 end)
+
+vim.keymap.set("v", "<leader>bt", ":s/\"/`/g<CR>:noh<CR>")
+
+
