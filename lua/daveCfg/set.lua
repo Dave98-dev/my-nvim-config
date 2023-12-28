@@ -14,3 +14,4 @@ vim.opt.wrap = false
 vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
+vim.opt.ignorecase = true

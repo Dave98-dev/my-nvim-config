@@ -15,7 +15,7 @@ require('mason').setup({})
 require('mason-lspconfig').setup({
   -- Replace the language servers listed here 
   -- with the ones you want to install
-  ensure_installed = {'intelephense'},
+  ensure_installed = {'lua_ls'},
   handlers = {
     lsp_zero.default_setup,
   },

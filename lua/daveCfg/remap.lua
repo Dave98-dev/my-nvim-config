@@ -11,5 +11,3 @@ vim.keymap.set("n", "<leader>bt", function ()
 end)
 
 vim.keymap.set("v", "<leader>bt", ":s/\"/`/g<CR>:noh<CR>")
-
-
