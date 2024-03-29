@@ -11,3 +11,20 @@ vim.keymap.set("n", "<leader>bt", function ()
 end)
 
 vim.keymap.set("v", "<leader>bt", ":s/\"/`/g<CR>:noh<CR>")
+
+
+vim.keymap.set("n", "<leader>cd", function()
+    local projectsArray = {
+        "C:\\Users\\div89\\source\\repos\\CmMateriePlastiche",
+        "C:\\Users\\div89\\AppData\\Local\\nvim"
+    }
+
+    vim.ui.select(projectsArray,{ prompt = "selezionare un progetto" }, function (str)
+        if str ~= nil then
+            vim.cmd("cd " .. str)
+        end
+    end)
+
+
+end)
+

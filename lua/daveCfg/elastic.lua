@@ -30,7 +30,7 @@ function El(symbol)
         if indexOfEq ~= nil then
             diff = max_equals - indexOfEq
         end
-        local newLine = string.gsub(line, symbol, string.rep(" ", diff) .. symbol)
+        local newLine = string.gsub(line, symbol, string.rep(" ", diff) .. symbol, 1)
         table.insert(newLines, newLine)
     end
 
