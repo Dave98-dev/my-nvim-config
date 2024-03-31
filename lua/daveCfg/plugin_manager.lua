@@ -17,7 +17,12 @@ require("lazy").setup({
     'nvim-telescope/telescope.nvim', tag = '0.1.6',
       dependencies = { 'nvim-lua/plenary.nvim' }
     },
-    {"rose-pine/neovim", name = "rose-pine", config=function() vim.cmd("colorscheme rose-pine") end},
+    {
+        "folke/tokyonight.nvim",
+        lazy = false,
+        priority = 1000,
+        opts = {},
+    },
     {'nvim-treesitter/nvim-treesitter', build=':TSUpdate'},
     "tpope/vim-fugitive",
     "nvim-telescope/telescope-ui-select.nvim",
@@ -35,5 +40,20 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
+    {
+        "folke/which-key.nvim",
+        event = "VeryLazy",
+        init = function()
+            vim.o.timeout = true
+            vim.o.timeoutlen = 300
+        end,
+        opts = {
+            -- your configuration comes here
+            --     -- or leave it empty to use the default settings
+            --         -- refer to the configuration section below
+        }
+    },
+    "dave98-dev/elastic",
+    "mg979/vim-visual-multi"
 })
 

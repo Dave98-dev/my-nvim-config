@@ -13,12 +13,12 @@ end)
 
 require('mason').setup({})
 require('mason-lspconfig').setup({
-  -- Replace the language servers listed here 
-  -- with the ones you want to install
-  ensure_installed = {'lua_ls'},
-  handlers = {
-    lsp_zero.default_setup,
-  },
+    -- Replace the language servers listed here 
+    -- with the ones you want to install
+    ensure_installed = {'lua_ls'},
+    handlers = {
+        lsp_zero.default_setup,
+    },
 })
 
 
@@ -34,3 +34,13 @@ lsp_zero.on_attach(function(client, buffer)
     vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, opts)
 end)
 
+require'lspconfig'.lua_ls.setup {
+  settings = {
+    Lua = {
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+    },
+  },
+}
