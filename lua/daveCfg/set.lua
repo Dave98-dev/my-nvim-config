@@ -15,3 +15,9 @@ vim.opt.incsearch = true
 
 vim.opt.scrolloff = 8
 vim.opt.ignorecase = true
+
+vim.opt.list = true
+vim.opt.listchars = { tab = '» ', trail = '·', nbsp = '␣' }
+
+vim.opt.clipboard = 'unnamedplus'
+
