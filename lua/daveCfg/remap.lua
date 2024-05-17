@@ -42,3 +42,7 @@ vim.keymap.set("i", "<M-Down>", "<Esc>:m .+1<CR>==gi", {silent = true})
 vim.keymap.set("i", "<M-Up>"  , "<Esc>:m .-2<CR>==gi", {silent = true})
 vim.keymap.set("v", "<M-Down>", ":m '>+1<CR>gv=gv", {silent = true})
 vim.keymap.set("v", "<M-Up>"  , ":m '<-2<CR>gv=gv", {silent = true})
+
+-- terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>")
