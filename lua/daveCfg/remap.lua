@@ -13,21 +13,6 @@ end)
 vim.keymap.set("v", "<leader>bt", ":s/\"/`/g<CR>:noh<CR>")
 
 
-vim.keymap.set("n", "<leader>cd", function()
-    local projectsArray = {
-        "C:\\Users\\div89\\source\\repos\\CmMateriePlastiche",
-        "C:\\Users\\div89\\AppData\\Local\\nvim",
-        "C:\\Users\\div89\\Documents\\lua\\nvim plugin"
-    }
-
-    vim.ui.select(projectsArray,{ nrompt = "selezionare un progetto" }, function (str)
-        if str ~= nil then
-            vim.cmd("cd " .. str)
-        end
-    end)
-
-
-end)
 
 vim.keymap.set("n", "<M-j>", ":m .+1<CR>==", {silent = true})
 vim.keymap.set("n", "<M-k>", ":m .-2<CR>==", {silent = true})
