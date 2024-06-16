@@ -31,3 +31,8 @@ vim.keymap.set("v", "<M-Up>"  , ":m '<-2<CR>gv=gv", {silent = true})
 -- terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
 vim.keymap.set("t", "<C-w>", "<C-\\><C-n><C-w>")
+
+vim.keymap.set("n", "<C-w><S-Up>"  , "<C-w>K")
+vim.keymap.set("n", "<C-w><S-Down>", "<C-w>J")
+vim.keymap.set("n", "<C-w><S-Left>", "<C-w>H")
+vim.keymap.set("n", "<C-w><S-Right>", "<C-w>L")
