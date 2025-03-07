@@ -12,8 +12,11 @@ end)
 
 vim.keymap.set("v", "<leader>bt", ":s/\"/`/g<CR>:noh<CR>")
 
+vim.keymap.set("n", "<leader><leader>", ":Telescope buffers<CR>", {silent = true})
+vim.keymap.set("n", "<leader>jl", ":Telescope jumplist<CR>", {silent = true})
 
 
+-- move with Meta(alt)
 vim.keymap.set("n", "<M-j>", ":m .+1<CR>==", {silent = true})
 vim.keymap.set("n", "<M-k>", ":m .-2<CR>==", {silent = true})
 vim.keymap.set("i", "<M-j>", "<Esc>:m .+1<CR>==gi", {silent = true})

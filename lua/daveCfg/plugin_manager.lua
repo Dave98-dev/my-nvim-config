@@ -40,20 +40,8 @@ require("lazy").setup({
     "williamboman/mason.nvim",
     "williamboman/mason-lspconfig.nvim",
     "neovim/nvim-lspconfig",
-    {
-        "folke/which-key.nvim",
-        event = "VeryLazy",
-        init = function()
-            vim.o.timeout = true
-            vim.o.timeoutlen = 300
-        end,
-        opts = {
-            -- your configuration comes here
-            --     -- or leave it empty to use the default settings
-            --         -- refer to the configuration section below
-        }
-    },
     "dave98-dev/elastic",
-    "mg979/vim-visual-multi"
+    "mg979/vim-visual-multi",
+    "echasnovski/mini.surround",
 })
 
