@@ -1,2 +1,6 @@
-require("tokyonight").setup()
-vim.cmd([[colorscheme tokyonight-storm]])
+require('onedark').setup {
+  style = 'darker',
+  transparent = true
+}
+-- Enable theme
+require('onedark').load()

@@ -43,5 +43,12 @@ require("lazy").setup({
     "dave98-dev/elastic",
     "mg979/vim-visual-multi",
     "echasnovski/mini.surround",
+{
+  "navarasu/onedark.nvim",
+  priority = 1000, -- make sure to load this before all the other start plugins
+  config = function()
+  end
+}
+
 })
 
